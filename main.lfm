@@ -1,0 +1,62 @@
+object MainForm: TMainForm
+  Left = 668
+  Height = 239
+  Top = 312
+  Width = 320
+  Caption = 'Player'
+  ClientHeight = 239
+  ClientWidth = 320
+  LCLVersion = '4.0.0.4'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  object btnOpen: TButton
+    Left = 56
+    Height = 25
+    Top = 32
+    Width = 75
+    Caption = 'Open'
+    TabOrder = 0
+    OnClick = btnOpenClick
+  end
+  object btnPlayPause: TButton
+    Left = 56
+    Height = 25
+    Top = 71
+    Width = 75
+    Caption = 'Play'
+    TabOrder = 1
+    OnClick = btnPlayPauseClick
+  end
+  object lbTime: TLabel
+    Left = 120
+    Height = 16
+    Top = 104
+    Width = 66
+    Caption = 'Décompte '
+  end
+  object btnStop: TButton
+    Left = 152
+    Height = 25
+    Top = 71
+    Width = 75
+    Caption = 'Stop'
+    TabOrder = 2
+    OnClick = btnStopClick
+  end
+  object tbSeek: TTrackBar
+    Left = 32
+    Height = 25
+    Top = 136
+    Width = 256
+    Position = 0
+    OnChange = tbSeekChange
+    TabOrder = 3
+  end
+  object tmTimer: TTimer
+    OnTimer = tmTimerTimer
+    Left = 8
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 272
+  end
+end
